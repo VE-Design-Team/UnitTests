@@ -1,0 +1,106 @@
+<html>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <head>
+<style>
+
+
+.popup__wrapper{
+  padding-top:5%;
+}
+
+
+.popup__logo{
+  width:30%;
+  padding:0 20px;
+}
+
+.popup__container{
+  margin: 0 auto;
+  max-width:1000px;
+  width:100%;
+  padding: 30px 15px;
+  box-sizing:border-box;
+  background-color:white;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.popup__text-container{
+   padding:3px 20px;
+   display:block;
+   font-family:manjari;
+   color:#000054;
+}
+
+.popup__hr{
+  height:1px;
+  border:none;
+  background:#aad75f;
+}
+
+.popupCloseButton{
+  background-color: #000054;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.popupCloseButton:hover {
+  background-color:#aad75f;
+  color:#000054;
+}
+
+
+</style>
+<script text="javascript">
+    function PopUp(hideOrshow) {
+    if (hideOrshow == 'hide') document.getElementById('ac-wrapper').style.display = "none";
+    else document.getElementById('ac-wrapper').removeAttribute('style');
+}
+window.onload = function () {
+    setTimeout(function () {
+        PopUp('show');
+    }, 1000);
+
+}
+   $('.popupCloseButton').click(function(){
+        $('.popup__wrapper').hide();
+    });
+
+    if (window.location.href.indexOf("?first-load") > -1) {
+    alert("found it");
+}
+
+</script>
+
+
+    </head>
+    <body>
+<div id="ac-wrapper" style='display:none'>
+    <div id="popup">
+<div class="popup__wrapper">
+<div class="popup__container"><img class="popup__logo" src="http://localhost/wordpress/wp-content/themes/112/vwp/img/theme/bagwan_logo.png">
+  <div class="popup__text-container">
+    <hr class="popup__hr">
+    <h2>welcome!</h2>
+    <h3>Append "?first-load" to the url and a popup will appear</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<a href="#" class="popupCloseButton">Get started</a>
+  </div>
+
+</div>
+</div>
+  </div>
+</div>
+</body>
+</html>
+
